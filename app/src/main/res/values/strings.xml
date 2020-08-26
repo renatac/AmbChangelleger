@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ChallengeAmbar</string>
+
+    <!--Communs-->
+
+    <!--MainActivity-->
+    <string name="name">Nome: </string>
+    <string name="author">Autor: </string>
+
+
 </resources>
