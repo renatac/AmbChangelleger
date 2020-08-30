@@ -1,49 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="git"
+            type="com.example.challengeambar.data.model.Git" />
+    </data>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/name"
-            android:textStyle="bold"/>
+            android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textName"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="@{git.name}"
+                tools:text="Name" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Name"
-            android:textColor="@android:color/black"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/author"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+
+                tools:text="@{git.author}" />
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/author"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textAuthor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Author"
-            android:textColor="@android:color/black"/>
-    </LinearLayout>
-
-</LinearLayout>
+</layout>

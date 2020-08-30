@@ -1,10 +1,11 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.activities.MainActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".view.activities.MainActivity">
+        android:layout_height="match_parent">
 
         <include
             android:id="@+id/toolbarMain"
@@ -33,14 +34,10 @@
                 android:layout_height="match_parent"
                 tools:listitem="@layout/item_list" />
 
-            <TextView
-                android:id="@+id/textViewError"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Error!!!"
-                tools:text="Erro 500"/>
+            <include layout="@layout/util_dialog" />
 
         </ViewFlipper>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

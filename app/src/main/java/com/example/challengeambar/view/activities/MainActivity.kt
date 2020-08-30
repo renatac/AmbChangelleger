@@ -3,6 +3,7 @@ package com.example.challengeambar.view.activities
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -35,8 +36,12 @@ class MainActivity : BaseActivity() {
             }
         })
 
-        viewModel.getGitResponse()
+        getGitResponse()
 
+    }
+
+    private fun getGitResponse() {
+        viewModel.getGitResponse()
     }
 
     private fun displayRecycler(gitList: List<Git>) {
@@ -62,5 +67,9 @@ class MainActivity : BaseActivity() {
             }
         }
 
+    }
+
+    fun tryAgain(view: View) {
+        getGitResponse()
     }
 }

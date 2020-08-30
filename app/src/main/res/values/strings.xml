@@ -2,6 +2,9 @@
     <string name="app_name">ChallengeAmbar</string>
 
     <!--Communs-->
+    <string name="label_try_again">Tente Novamente</string>
+    <string name="label_error">Error Inesperado</string>
+
 
     <!--MainActivity-->
     <string name="name">Nome: </string>
