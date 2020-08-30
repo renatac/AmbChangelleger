@@ -3,7 +3,6 @@ package com.example.challengeambar.view.activities
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +12,8 @@ import com.example.challengeambar.data.model.Git
 import com.example.challengeambar.view.adapters.MyAdapter
 import com.example.challengeambar.view.communs.BaseActivity
 import com.example.challengeambar.viewmodel.GitViewModel
+import com.example.challengeambar.viewmodel.GitViewModel.Companion.VIEW_FLIPPER_ERROR
+import com.example.challengeambar.viewmodel.GitViewModel.Companion.VIEW_FLIPPER_GIT_LIST
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
@@ -27,9 +28,9 @@ class MainActivity : BaseActivity() {
 
         viewModel.gitMutableLiveData.observe(this, Observer { gitList ->
             if (gitList == null) {
-//                displayError("Erro")
-                Toast.makeText(this, "lista nula", Toast.LENGTH_LONG).show()
+                viewFlipper.displayedChild = VIEW_FLIPPER_ERROR
             } else {
+                viewFlipper.displayedChild = VIEW_FLIPPER_GIT_LIST
                 displayRecycler(gitList)
             }
         })

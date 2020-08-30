@@ -12,11 +12,10 @@ import retrofit2.Response
 class GitViewModel : ViewModel() {
 
     val gitMutableLiveData = MutableLiveData<List<Git>>()
-    val viewFlipperLiveData = MutableLiveData<Int>()
 
     companion object {
-        private const val VIEW_FLIPPER_GIT_LIST = 1
-        private const val VIEW_FLIPPER_ERROR = 2
+        const val VIEW_FLIPPER_GIT_LIST = 1
+        const val VIEW_FLIPPER_ERROR = 2
     }
 
     fun getGitResponse() {
@@ -43,14 +42,12 @@ class GitViewModel : ViewModel() {
                         }
 
                         gitMutableLiveData.value = gitMutableList
-                        viewFlipperLiveData.value = VIEW_FLIPPER_GIT_LIST
                     }
                 }
             }
 
             override fun onFailure(call: Call<List<GitResponse>>, t: Throwable) {
                 gitMutableLiveData.value = null
-                viewFlipperLiveData.postValue(VIEW_FLIPPER_ERROR)
             }
         })
     }
