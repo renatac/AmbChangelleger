@@ -25,6 +25,8 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setupToolbar(toolbarMain, R.string.app_name)
+
         viewModel = ViewModelProviders.of(this).get(GitViewModel::class.java)
 
         viewModel.gitMutableLiveData.observe(this, Observer { gitList ->
