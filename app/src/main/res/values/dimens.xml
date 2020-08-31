@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--activity_main-->
+    <dimen name="default_text_view">20dp</dimen>
+
+    <!--util_dialog-->
+    <dimen name="img_alert_esclamation_size">50dp</dimen>
+</resources>

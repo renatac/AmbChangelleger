@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -10,53 +10,66 @@
             type="com.example.challengeambar.data.model.Git" />
     </data>
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:background="@color/white"
+        android:importantForAccessibility="yes"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/name"
-                android:textStyle="bold" />
+                android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/textName"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_name"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{git.name}"
+                    android:textColor="@android:color/black"
+                    tools:text="Name" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="@{git.name}"
-                tools:text="Name" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_author"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="@{git.author}"
+                    tools:text="Author" />
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/author"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/textAuthor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-
-                tools:text="@{git.author}" />
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </layout>

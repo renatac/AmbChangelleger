@@ -9,6 +9,7 @@
     </style>
 
     <style name="TxtViewDefaultStyle">
+        <item name="android:textSize">@dimen/default_text_view</item>
         <item name="android:textColor">@color/black</item>
     </style>
 

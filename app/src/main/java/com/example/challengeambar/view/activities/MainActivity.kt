@@ -59,14 +59,18 @@ class MainActivity : BaseActivity() {
                 }
 
                 adapter = MyAdapter(gitList) {
-                    val uri: Uri = Uri.parse(it.url)
-                    val intent = Intent(Intent.ACTION_VIEW, uri)
-                    startActivity(intent)
+                    goToBrosew(it.url)
                 }
 
             }
         }
 
+    }
+
+    private fun goToBrosew(url: String){
+        val uri: Uri = Uri.parse(url)
+        val intent = Intent(Intent.ACTION_VIEW, uri)
+        startActivity(intent)
     }
 
     fun tryAgain(view: View) {

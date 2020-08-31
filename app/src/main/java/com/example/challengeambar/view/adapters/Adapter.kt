@@ -11,11 +11,10 @@ import com.example.challengeambar.databinding.ItemListBinding
 class MyAdapter(
     private val gits: List<Git>,
     val onClickListener: (Git) -> Unit
-) :
-    RecyclerView.Adapter<MyAdapter.MyView>() {
+) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyView =
-        MyView(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder =
+        MyViewHolder(
             DataBindingUtil.inflate(
                 LayoutInflater.from(parent.context),
                 R.layout.item_list,
@@ -24,7 +23,7 @@ class MyAdapter(
             )
         )
 
-    override fun onBindViewHolder(viewHolder: MyView, position: Int) {
+    override fun onBindViewHolder(viewHolder: MyViewHolder, position: Int) {
         val git = gits[position]
         viewHolder.binding.git = git
         viewHolder.binding.root.setOnClickListener {
@@ -34,7 +33,7 @@ class MyAdapter(
 
     override fun getItemCount() = gits.size
 
-    inner class MyView constructor(val binding: ItemListBinding) :
+    inner class MyViewHolder constructor(val binding: ItemListBinding) :
         RecyclerView.ViewHolder(binding.root)
 }
 
