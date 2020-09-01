@@ -14,8 +14,8 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:cardBackgroundColor="@color/white"
+        android:layout_marginTop="2dp"
+        app:cardBackgroundColor="@android:color/white"
         app:cardElevation="2dp"
         app:cardUseCompatPadding="true">
 
@@ -32,7 +32,7 @@
                 android:textStyle="bold"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                tools:text="1º Repositório Público"/>
+                tools:text="1"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"

@@ -10,8 +10,8 @@
 
 
     <!--MainActivity-->
-    <string name="label_name">Nome do repositório: </string>
-    <string name="label_author">Autor: </string>
+    <string name="label_name"><u>Nome do repositório</u>:</string>
+    <string name="label_author"><u>Autor:</u></string>
 
 
 </resources>
