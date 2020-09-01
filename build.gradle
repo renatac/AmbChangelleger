@@ -28,7 +28,7 @@ ext {
     recyclerviewVersion = "1.1.0"
     retrofitVersion = "2.6.1"
     rxjavaVersion = '2.1.1'
-    lifecycleVersion = '2.1.0-alpha02'
+    lifecycleVersion = '2.2.0'
 }
 
 task clean(type: Delete) {
