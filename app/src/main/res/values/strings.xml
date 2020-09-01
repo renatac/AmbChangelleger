@@ -1,17 +1,14 @@
 <resources>
     <string name="app_name">Ambar Challenge</string>
 
-    <!--Communs-->
-    <string name="label_try_again">Tente Novamente</string>
-    <string name="label_error">Error Inesperado</string>
-
     <!--SplashActivity-->
     <string name="label_splash">Desafio: Repositório GitHub</string>
 
-
     <!--MainActivity-->
-    <string name="label_name"><u>Nome do repositório</u>:</string>
+    <string name="label_rankink"><u>%sº</u>:</string>
+    <string name="label_name"><u>Repositório</u>:</string>
     <string name="label_author"><u>Autor:</u></string>
-
+    <string name="label_try_again">Tente Novamente</string>
+    <string name="label_error">Error Inesperado</string>
 
 </resources>

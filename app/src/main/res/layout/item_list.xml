@@ -14,8 +14,8 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        app:cardBackgroundColor="@android:color/white"
+        android:layout_marginBottom="2dp"
+        app:cardBackgroundColor="@color/white"
         app:cardElevation="2dp"
         app:cardUseCompatPadding="true">
 
@@ -30,8 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginRight="@dimen/default_margin"
                 tools:text="1"/>
 
             <LinearLayout
@@ -45,8 +45,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/label_name"
                     android:textStyle="bold"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp" />
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/textName"
@@ -69,8 +69,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/label_author"
                     android:textStyle="bold"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"/>
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/textAuthor"

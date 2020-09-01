@@ -1,5 +1,6 @@
 package com.example.challengeambar.data.Response
 
+import com.example.challengeambar.data.model.Git
 import com.google.gson.annotations.SerializedName
 
 data class GitResponse(
@@ -12,4 +13,12 @@ data class GitResponse(
 
     @SerializedName("html_url")
     val url: String
-)
+){
+    fun getGitModel() = Git(
+        name = this.repositoryName,
+        author = this.owner.author,
+        url = this.url
+    )
+
+}
+

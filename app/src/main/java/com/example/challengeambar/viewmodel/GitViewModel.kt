@@ -30,14 +30,9 @@ class GitViewModel : ViewModel() {
 
                         val gitMutableList: MutableList<Git> = mutableListOf()
 
-                        response.body()?.let { gitResponse ->
-                            for (index in 0 until gitResponse.size) {
-                                val git = Git(
-                                    name = gitResponse[index].repositoryName,
-                                    author = gitResponse[index].owner.author,
-                                    url = gitResponse[index].url
-                                )
-                                gitMutableList.add(git)
+                        response.body()?.let { gitResponseList ->
+                            for (itemGitReponse in gitResponseList) {
+                                gitMutableList.add(itemGitReponse.getGitModel())
                             }
                         }
 

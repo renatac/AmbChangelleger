@@ -5,4 +5,6 @@
 
     <!--util_dialog-->
     <dimen name="img_alert_esclamation_size">50dp</dimen>
+    <dimen name="default_margin">8dp</dimen>
+
 </resources>
