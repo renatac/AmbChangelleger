@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.challengeambar.R
 import com.example.challengeambar.data.model.Git
 import com.example.challengeambar.databinding.ItemListBinding
+import kotlinx.android.synthetic.main.item_list.view.*
 
 class MyAdapter(
     private val gits: List<Git>,
@@ -29,6 +30,7 @@ class MyAdapter(
     override fun onBindViewHolder(viewHolder: MyViewHolder, position: Int) {
         val git = gits[position]
         viewHolder.binding.git = git
+        viewHolder.itemView.rankingPosition.text = (position + 1).toString()
 
         viewHolder.binding.root.setOnClickListener {
             index = position
